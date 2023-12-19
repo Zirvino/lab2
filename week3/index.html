@@ -4,11 +4,11 @@
 <style>
 body {
     border-radius: 5px;
+    background-image: url('GIF/Smoke.gif'); 
     background-position: center;
-    background-size: 100%, 100%;
+    background-size: cover;
     background-attachment: fixed;
-    background-color: #000; /* Black background color */
-    color: #fff; /* White text color */
+    color: #fff; 
 }
 
 .center-container {
@@ -16,11 +16,11 @@ body {
 }
 
 .round-image {
-    border-radius: 20px; /* Adjust the value for the desired roundness */
+    border-radius: 20px; 
 }
 
 .title-container {
-    background-color: rgba(255, 255, 255, 0.5); /* White background color with 50% transparency */
+    background-color: rgba(255, 255, 255, 0.5); 
     padding-top: 2px;
     padding-right: 20px;
     padding-bottom: 2px;
@@ -31,11 +31,11 @@ body {
 
 .circular-picture {
     position: absolute;
-    top: 20px; /* Adjust the top position as needed */
-    right: 20px; /* Adjust the right position as needed */
+    top: 20px; 
+    right: 20px; 
     width: 100px;
     height: 100px;
-    border-radius: 20px; /* Adjust the value for the desired roundness */
+    border-radius: 20px; 
     overflow: hidden;
 }
 
@@ -44,7 +44,17 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 50%; /* 50% for a circular shape */
+    border-radius: 50%; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.image-container > div {
+    flex: 0 0 calc(33.33% - 10px); 
+    margin-right: 10px; 
 }
 </style>
 
@@ -53,28 +63,29 @@ body {
         <div class="title-container">
             <h1 class="title">Yang's Profile</h1>
         </div>
-        <p class="body1">My name is Paul Damian Mariano, but my nickname is Yang, derived from my Chinese name.</p>
+        <p class="body1">Hey there, my name is Paul Damian Mariano, but my nickname is Yang, and I'm 21 years old. I'm taking the course Computer Science at Asia Pacfic College!<br> Here are the games I like to play often.</p>
     </center>
 </section>
 
 <section class="body1">
     <div class="center-container">
-        <div>
-            <p>GENSHIN</p>
-            <img src="images/GENSHIN.png" alt="GENSHIN" style="width:500px;height:300px;" class="round-image">
-        </div>
-        <div>
-            <p>LEAGUE</p>
-            <img src="images/LEAGUE.png" alt="LEAGUE" style="width:500px;height:300px;" class="round-image">
-        </div>
-        <div>
-            <p>THE FINALS</p>
-            <img src="images/THE FINALS.png" alt="THE FINALS" style="width:500px;height:300px;" class="round-image">
+        <div class="image-container">
+            <div>
+                <p>GENSHIN</p>
+                <img src="images/GENSHIN.png" alt="GENSHIN" style="width:500px;height:300px;" class="round-image">
+            </div>
+            <div>
+                <p>LEAGUE</p>
+                <img src="images/LEAGUE.png" alt="LEAGUE" style="width:500px;height:300px;" class="round-image">
+            </div>
+            <div>
+                <p>THE FINALS</p>
+                <img src="images/THE FINALS.png" alt="THE FINALS" style="width:500px;height:300px;" class="round-image">
+            </div>
         </div>
     </div>
 
     <div class="circular-picture">
-        <!-- Placeholder image, replace with your actual image URL -->
         <img src="images/Me.jpg" alt="Me">
     </div>
 </section>
