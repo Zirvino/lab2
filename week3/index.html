@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body {
+    border-radius: 5px;
+    background-position: center;
+    background-size: 100%, 100%;
+    background-attachment: fixed;
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
+}
+
+.center-container {
+    text-align: center;
+}
+
+.round-image {
+    border-radius: 20px; /* Adjust the value for the desired roundness */
+}
+
+.title-container {
+    background-color: rgba(255, 255, 255, 0.5); /* White background color with 50% transparency */
+    padding-top: 2px;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.circular-picture {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    width: 100px;
+    height: 100px;
+    border-radius: 20px; /* Adjust the value for the desired roundness */
+    overflow: hidden;
+}
+
+.circular-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%; /* 50% for a circular shape */
+}
+</style>
+
+<section>
+    <center>
+        <div class="title-container">
+            <h1 class="title">Yang's Profile</h1>
+        </div>
+        <p class="body1">My name is Paul Damian Mariano, but my nickname is Yang, derived from my Chinese name.</p>
+    </center>
+</section>
+
+<section class="body1">
+    <div class="center-container">
+        <div>
+            <p>GENSHIN</p>
+            <img src="images/GENSHIN.png" alt="GENSHIN" style="width:500px;height:300px;" class="round-image">
+        </div>
+        <div>
+            <p>LEAGUE</p>
+            <img src="images/LEAGUE.png" alt="LEAGUE" style="width:500px;height:300px;" class="round-image">
+        </div>
+        <div>
+            <p>THE FINALS</p>
+            <img src="images/THE FINALS.png" alt="THE FINALS" style="width:500px;height:300px;" class="round-image">
+        </div>
+    </div>
+
+    <div class="circular-picture">
+        <!-- Placeholder image, replace with your actual image URL -->
+        <img src="images/Me.jpg" alt="Me">
+    </div>
+</section>
+
+</html>
