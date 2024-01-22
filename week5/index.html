@@ -3,68 +3,39 @@
 
 <head>
     <title>Yang's Profile</title>
+    
     <link rel="icon" href="icon/icon.ico" type="image/x-icon">
 
     <style>
         body {
             border-radius: 5px;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
             background-image: url('GIF/Smoke.gif');
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
             color: #fff;
-            margin: 0;
-        }
-
-        .cover {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 115%;
-            background: #000;
-            z-index: 9999;
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .unveil-button {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #8885ac;
-            color: #000;
-            padding: 15px 25px;
-            font-size: 18px;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            z-index: 10000;
+            font-family: Arial, sans-serif; 
         }
 
         .center-container {
             text-align: center;
-            z-index: 1;
         }
 
         .title-container {
             background-color: #8885ac;
-            padding: 15px 25px;
+            padding: 10px 20px; 
             border-radius: 20px;
             display: inline-block;
         }
 
         .title {
-            font-size: 24px;
-            margin: 0;
+            font-size: 24px; 
+            margin: 0; 
         }
 
         .body1 {
-            font-size: 16px;
-            margin-bottom: 20px;
+            font-size: 16px; 
+            margin-bottom: 20px; 
         }
 
         .circular-picture {
@@ -90,7 +61,6 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 30px; 
         }
 
         .image-container > div {
@@ -104,7 +74,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 20px;
         }
 
         .video-overlay {
@@ -150,56 +119,41 @@
             height: 80px;
             border: none;
         }
-
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 10px 10px;
-            text-align: center;
-            z-index: 10001;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
     </style>
 </head>
 
 <body>
-
-    <div class="cover" id="cover"></div>
-
-    <button class="unveil-button" onclick="unveilContent()">View Yang's Profile</button>
-
-    <section class="center-container">
-        <div class="title-container">
-            <h1 class="title">Yang's Profile</h1>
-        </div>
-        <p class="body1">Hey there, my name is Paul Damian Mariano, but my nickname is Yang, and I'm 21 years old. I'm taking the course Computer Science at Asia Pacific College!</p>
-        <h2 class="title">Games I Play Often</h2>
-
-        <div class="image-container">
-            <div>
-                <div class="video-overlay">
-                    <p>GENSHIN</p>
-                </div>
-                <img src="videos/GENSHIN.gif" alt="GENSHIN" class="round-image">
+    <section>
+        <center>
+            <div class="title-container">
+                <h1 class="title">Yang's Profile</h1>
             </div>
-            <div>
-                <div class="video-overlay">
-                    <p>LEAGUE</p>
+            <p class="body1">Hey there, my name is Paul Damian Mariano, but my nickname is Yang, and I'm 21 years old. I'm taking the course Computer Science at Asia Pacific College!</p>
+            <h2 class="title">Games I Play Often</h2>
+        </center>
+    </section>
+
+    <section class="body1">
+        <div class="center-container">
+            <div class="image-container">
+                <div>
+                    <div class="video-overlay">
+                        <p id="game1Overlay"></p>
+                    </div>
+                    <img id="game1Image" class="round-image">
                 </div>
-                <img src="videos/LEAGUE.gif" alt="LEAGUE" class="round-image">
-            </div>
-            <div>
-                <div class="video-overlay">
-                    <p>THE FINALS</p>
+                <div>
+                    <div class="video-overlay">
+                        <p id="game2Overlay"></p>
+                    </div>
+                    <img id="game2Image" class="round-image">
                 </div>
-                <img src="videos/THE FINALS.gif" alt="THE FINALS" class="round-image">
+                <div>
+                    <div class="video-overlay">
+                        <p id="game3Overlay"></p>
+                    </div>
+                    <img id="game3Image" class="round-image">
+                </div>
             </div>
         </div>
 
@@ -208,6 +162,10 @@
         </div>
 
         <div class="song-container">
+            <center>
+                <h2 class="title">My Favorite Songs</h2>
+                <h2 class="title">VOLUME WARNING! </h2>
+            </center>
             <div class="song-item">
                 <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/0zqBZqm5czQ3A4EoSdKFHj?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
@@ -225,25 +183,23 @@
             </div>
         </div>
     </section>
-  
-<div class="footer">
-    <a href="https://github.com/Zirvino" target="_blank">Visit my GitHub Profile</a>
-</div>
 
-<script>
-    function unveilContent() {
+    <script>
+        var gamesInfo = {
+            game1: { name: "GENSHIN", gif: "videos/GENSHIN.gif" },
+            game2: { name: "LEAGUE", gif: "videos/LEAGUE.gif" },
+            game3: { name: "THE FINALS", gif: "videos/THE FINALS.gif" }
+        };
 
-        document.getElementById('cover').style.opacity = '0';
+        document.getElementById("game1Overlay").innerText = gamesInfo.game1.name;
+        document.getElementById("game1Image").src = gamesInfo.game1.gif;
 
+        document.getElementById("game2Overlay").innerText = gamesInfo.game2.name;
+        document.getElementById("game2Image").src = gamesInfo.game2.gif;
 
-        document.querySelector('.unveil-button').style.display = 'none';
-
-
-        setTimeout(() => {
-            document.body.style.overflow = 'visible';
-        }, 1000);
-    }
-</script>
+        document.getElementById("game3Overlay").innerText = gamesInfo.game3.name;
+        document.getElementById("game3Image").src = gamesInfo.game3.gif;
+    </script>
 </body>
-</html>
 
+</html>
