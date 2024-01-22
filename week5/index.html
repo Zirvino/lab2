@@ -46,7 +46,7 @@
             height: 100px;
             border-radius: 20px;
             overflow: hidden;
-            cursor: pointer; /* Add cursor property for better user experience */
+            cursor: pointer; 
         }
 
         .circular-picture img {
@@ -187,14 +187,14 @@
     </section>
 
     <script>
-        // Define an object to store information about the games
+
         var gamesInfo = {
             game1: { name: "GENSHIN", gif: "videos/GENSHIN.gif" },
             game2: { name: "LEAGUE", gif: "videos/LEAGUE.gif" },
             game3: { name: "THE FINALS", gif: "videos/THE FINALS.gif" }
         };
 
-        // Update game images and overlays dynamically using the object properties
+
         document.getElementById("game1Overlay").innerText = gamesInfo.game1.name;
         document.getElementById("game1Image").src = gamesInfo.game1.gif;
 
@@ -204,7 +204,6 @@
         document.getElementById("game3Overlay").innerText = gamesInfo.game3.name;
         document.getElementById("game3Image").src = gamesInfo.game3.gif;
 
-        // Function to redirect to GitHub profile when the circular picture is clicked
         function redirectToGitHub() {
             window.location.href = "https://github.com/Zirvino";
         }
