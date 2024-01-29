@@ -165,7 +165,7 @@
     </section>
 
     <script>
-        //update 1
+        //update 2
         var gamesInfo = {
             game1: { name: "GENSHIN", gif: "videos/GENSHIN.gif" },
             game2: { name: "LEAGUE", gif: "videos/LEAGUE.gif" },
