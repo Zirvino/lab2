@@ -146,17 +146,43 @@
                 <h2 class="title">My Favorite Songs</h2>
                 <h2 class="title">VOLUME WARNING! </h2>
             </center>
-            <!-- Spotify iframes for songs - assuming these remain static -->
             <div class="song-item">
                 <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/0zqBZqm5czQ3A4EoSdKFHj?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
-            <!-- ... include all other song iframes ... -->
+            <div class="song-item">
+                <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/3duI7TT4kzLtoqf4PeUR3Z?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="song-item">
+                <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/28VbwtsYnj85UEODGpQRem?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="song-item">
+                <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/1rBTBbtkJlSDk78gg8Dw9F?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="song-item">
+                <iframe class="spotify-iframe" src="https://open.spotify.com/embed/track/1Ph65gYzHdiNDs9yWh4ePY?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
     </section>
 
     <script>
-        // Assuming your JavaScript remains as is
-        // If dynamic JS content is needed, PHP can also be integrated
+        var gamesInfo = {
+            game1: { name: "GENSHIN", gif: "videos/GENSHIN.gif" },
+            game2: { name: "LEAGUE", gif: "videos/LEAGUE.gif" },
+            game3: { name: "THE FINALS", gif: "videos/THE FINALS.gif" }
+        };
+
+        document.getElementById("game1Overlay").innerText = gamesInfo.game1.name;
+        document.getElementById("game1Image").src = gamesInfo.game1.gif;
+
+        document.getElementById("game2Overlay").innerText = gamesInfo.game2.name;
+        document.getElementById("game2Image").src = gamesInfo.game2.gif;
+
+        document.getElementById("game3Overlay").innerText = gamesInfo.game3.name;
+        document.getElementById("game3Image").src = gamesInfo.game3.gif;
+
+        function redirectToGitHub() {
+            window.location.href = "https://github.com/Zirvino";
+        }
     </script>
 </body>
 </html>
