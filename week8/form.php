@@ -100,5 +100,18 @@ echo "<br>";
 echo $gender;
 ?>
 
+<?php
+// For Xampp Localhost
+//$servername = "localhost";
+//$username = "root";
+//$password = "";
+//$dbname = "myDB";
+
+<?php
+$servername = "localhost";
+$username = "webprogmi222_sf221";
+$password = "xE*Y2nleNVvZm[!!";
+$dbname = "webprogmi222_sf221";
+
 </body>
 </html>
