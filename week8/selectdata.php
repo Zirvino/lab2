@@ -4,7 +4,8 @@
 //$username = "root";
 //$password = "";
 //$dbname = "myDB";
-
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 //apcwebprog config
 $servername = "localhost";
 $username = "webprogss221";
