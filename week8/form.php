@@ -106,11 +106,12 @@ echo $gender;
 //$username = "root";
 //$password = "";
 //$dbname = "myDB";
-
-$servername = "localhost";
-$username = "webprogmi222_sf221";
-$password = "xE*Y2nleNVvZm[!!";
-$dbname = "webprogmi222_sf221";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Your database credentials and connection logic here
+    $servername = "localhost";
+    $username = "webprogmi222_sf221";
+    $password = "xE*Y2nleNVvZm[!!";
+    $dbname = "webprogmi222_sf221"
 
 
 // Create connection
